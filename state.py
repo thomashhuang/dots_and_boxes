@@ -53,6 +53,40 @@ class State:
             return 2
         return 0
 
+    def draw(self):
+        print(self.edges)
+        print('Player 1 score: {}'.format(len(self.p1_boxes)))
+        print('Player 2 score: {}'.format(len(self.p2_boxes)))
+        '''
+        board_str = ''
+        max_edge_idx = 2 * n**2 - 2 * n
+        idx = 0
+        row_idx = 0
+        box_idx = 0
+        while idx < max_edge_idx:
+            if row_idx % 2 == 0:
+                for i in range(self.grid_size - 1):
+                    board_str += '.'
+                    if idx in self.edges:
+                        board_str += '---'
+                    else:
+                        board_str += '{:03d}'.format(idx)
+                    idx += 1
+                board_str += '.'
+            else:
+                for i in range(self.grid_size - 1):
+                    if idx in self.edges:
+                        board_str += '|'
+                    else:
+                        board_str += 
+        '''
+        pass
+
+
+
+
+
+
 class Box:
     def __init__(self, grid_size, coordinate):
         self.x, self.y = coordinate[0], coordinate[1]
